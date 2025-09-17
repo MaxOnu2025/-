@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva - MaxOnu</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MaxOnu</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="comite.html" class="nav-link">Cômite</a>
+                <a href="countdown.html" class="nav-link active">Contagem Regressiva</a>
+                <a href="delegations.html" class="nav-link">Delegações</a>
+                <a href="dpos.html" class="nav-link">DPOs</a>
+                <a href="rules.html" class="nav-link">Regras</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="files.html" class="nav-link">Arquivos</a>
+                <a href="instagram.html" class="nav-link instagram-link">Instagram</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content countdown-page">
+        <section class="countdown-hero">
+            <div class="container">
+                <h1 class="page-title fade-in">Contagem Regressiva</h1>
+                <p class="page-subtitle slide-up">Faltam poucos dias para a MaxOnu!</p>
+                
+                <div class="countdown-container">
+                    <div class="countdown-timer" id="countdown-timer">
+                        <div class="time-unit">
+                            <div class="time-number" id="days">00</div>
+                            <div class="time-label">Dias</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-number" id="hours">00</div>
+                            <div class="time-label">Horas</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-number" id="minutes">00</div>
+                            <div class="time-label">Minutos</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-number" id="seconds">00</div>
+                            <div class="time-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-info">
+                    <h2>Informações do Evento</h2>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">📅</div>
+                            <h3>Data</h3>
+                            <p>18 de Outubro de 2025</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <h3>Local</h3>
+                            <p>Colégio Maximus - Palmares.</p>
+                            <p> R. Prof. Antônio Márcio, 333 - Palmares, Belo Horizonte - MG, 31155-480.</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <h3>Horário</h3>
+                            <p>07:00 - 12:30</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excitement-meter">
+                    <h3>Nível de Expectativa</h3>
+                    <div class="meter-container">
+                        <div class="meter-bar">
+                            <div class="meter-fill" id="excitement-fill"></div>
+                        </div>
+                        <div class="meter-label">Muito Alto!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MaxOnu 2025</h3>
+                    <p>O maior evento de delegações das Nações Unidas do mundo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="delegations.html">Delegações</a></li>
+                        <li><a href="rules.html">Regras</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>maxonu@contato.com</p>
+                    <a href="https://www.instagram.com/maxonuofc/" target="_blank" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MaxOnu. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="countdown.js"></script>
+</body>
+</html>
+
+
+
+
+
+<script>
+    // Countdown Timer for MaxOnu Event
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Set the date for the MaxOnu event
+    const eventDate = new Date('October 18, 2025 07:00:00').getTime();
+    
+    // Get countdown elements
+    const daysElement = document.getElementById('days');
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
+        console.warn('Countdown elements not found');
+        return;
+    }
+
+    // Update countdown every second
+    const countdownInterval = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            showEventStarted();
+            return;
+        }
+
+        // Calculate time units
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update display with animation
+        updateTimeUnit(daysElement, days);
+        updateTimeUnit(hoursElement, hours);
+        updateTimeUnit(minutesElement, minutes);
+        updateTimeUnit(secondsElement, seconds);
+
+        // Update excitement meter based on time remaining
+        updateExcitementMeter(distance);
+    }, 1000);
+
+    // Function to update time unit with animation
+    function updateTimeUnit(element, value) {
+        const formattedValue = value.toString().padStart(2, '0');
+        if (element.textContent !== formattedValue) {
+            element.style.transform = 'scale(1.1)';
+            element.style.color = 'var(--accent-yellow)';
+            
+            setTimeout(() => {
+                element.textContent = formattedValue;
+                element.style.transform = 'scale(1)';
+                element.style.color = 'var(--primary-blue)';
+            }, 150);
+        }
+    }
+
+    // Function to show event started message
+    function showEventStarted() {
+        const countdownContainer = document.querySelector('.countdown-container');
+        if (countdownContainer) {
+            countdownContainer.innerHTML = `
+                <div class="event-started">
+                    <h2>🎉 O MaxOnu 2025 começou! 🎉</h2>
+                    <p>O maior evento de delegações das Nações Unidas está acontecendo agora!</p>
+                </div>
+            `;
+        }
+    }
+
+    // Function to update excitement meter
+    function updateExcitementMeter(timeRemaining) {
+        const excitementFill = document.getElementById('excitement-fill');
+        if (!excitementFill) return;
+
+        const totalTime = new Date('December 15, 2025 09:00:00').getTime() - new Date('January 1, 2025').getTime();
+        const timeElapsed = totalTime - timeRemaining;
+        const percentage = Math.min(95, (timeElapsed / totalTime) * 100 + 50);
+        
+        excitementFill.style.width = percentage + '%';
+    }
+
+    // Add special effects for milestone moments
+    setInterval(function() {
+        const now = new Date();
+        const currentSeconds = now.getSeconds();
+        
+        // Special animation every 10 seconds
+        if (currentSeconds % 10 === 0) {
+            addSparkleEffect();
+        }
+    }, 1000);
+
+    // Function to add sparkle effect
+    function addSparkleEffect() {
+        const countdownTimer = document.querySelector('.countdown-timer');
+        if (!countdownTimer) return;
+
+        for (let i = 0; i < 5; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.cssText = `
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: var(--accent-yellow);
+                border-radius: 50%;
+                pointer-events: none;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: sparkle 1s ease-out forwards;
+                z-index: 10;
+            `;
+            countdownTimer.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+    }
+
+    // Add sparkle animation to CSS
+    const sparkleStyle = document.createElement('style');
+    sparkleStyle.textContent = `
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0) rotate(360deg);
+            }
+        }
+        
+        .event-started {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--accent-yellow), #ff9800);
+            border-radius: 20px;
+            color: var(--primary-blue);
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .event-started h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .event-started p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    `;
+    document.head.appendChild(sparkleStyle);
+
+    // Initialize countdown with current values
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysElement.textContent = days.toString().padStart(2, '0');
+        hoursElement.textContent = hours.toString().padStart(2, '0');
+        minutesElement.textContent = minutes.toString().padStart(2, '0');
+        secondsElement.textContent = seconds.toString().padStart(2, '0');
+    }
+});
+</script>

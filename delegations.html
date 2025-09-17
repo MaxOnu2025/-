@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegações - MaxOnu</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MaxOnu</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="comite.html" class="nav-link">Cômite</a>
+                <a href="countdown.html" class="nav-link">Contagem Regressiva</a>
+                <a href="delegations.html" class="nav-link active">Delegações</a>
+                <a href="dpos.html" class="nav-link">DPOs</a>
+                <a href="rules.html" class="nav-link">Regras</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="files.html" class="nav-link">Arquivos</a>
+                <a href="instagram.html" class="nav-link instagram-link">Instagram</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content delegations-page">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title fade-in">Delegações Participantes</h1>
+                <p class="page-subtitle slide-up">193 países unidos por um objetivo comum</p>
+            </div>
+        </section>
+
+        <section class="delegations-content">
+            <div class="container">
+                <div class="search-filter">
+                    <input type="text" id="country-search" placeholder="Buscar país...">
+                    <select id="continent-filter">
+                        <option value="">Todos os continentes</option>
+                        <option value="africa">África</option>
+                        <option value="asia">Ásia</option>
+                        <option value="europe">Europa</option>
+                        <option value="north-america">América do Norte</option>
+                        <option value="south-america">América do Sul</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
+
+                <div class="delegations-grid" id="delegations-grid">
+                    <div class="delegation-card" data-continent="south-america">
+                        <div class="flag-placeholder">🇧🇷</div>
+                        <h3>Brasil</h3>
+                        <p class="delegation-size">15 delegados</p>
+                        <p class="delegation-focus">Sustentabilidade e Desenvolvimento</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="north-america">
+                        <div class="flag-placeholder">🇺🇸</div>
+                        <h3>Estados Unidos</h3>
+                        <p class="delegation-size">20 delegados</p>
+                        <p class="delegation-focus">Segurança Internacional</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="europe">
+                        <div class="flag-placeholder">🇫🇷</div>
+                        <h3>França</h3>
+                        <p class="delegation-size">12 delegados</p>
+                        <p class="delegation-focus">Direitos Humanos</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="asia">
+                        <div class="flag-placeholder">🇯🇵</div>
+                        <h3>Japão</h3>
+                        <p class="delegation-size">18 delegados</p>
+                        <p class="delegation-focus">Tecnologia e Inovação</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="europe">
+                        <div class="flag-placeholder">🇩🇪</div>
+                        <h3>Alemanha</h3>
+                        <p class="delegation-size">16 delegados</p>
+                        <p class="delegation-focus">Economia Verde</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="asia">
+                        <div class="flag-placeholder">🇨🇳</div>
+                        <h3>China</h3>
+                        <p class="delegation-size">22 delegados</p>
+                        <p class="delegation-focus">Cooperação Global</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="europe">
+                        <div class="flag-placeholder">🇬🇧</div>
+                        <h3>Reino Unido</h3>
+                        <p class="delegation-size">14 delegados</p>
+                        <p class="delegation-focus">Mudanças Climáticas</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="africa">
+                        <div class="flag-placeholder">🇿🇦</div>
+                        <h3>África do Sul</h3>
+                        <p class="delegation-size">10 delegados</p>
+                        <p class="delegation-focus">Igualdade Social</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="oceania">
+                        <div class="flag-placeholder">🇦🇺</div>
+                        <h3>Austrália</h3>
+                        <p class="delegation-size">11 delegados</p>
+                        <p class="delegation-focus">Conservação Marinha</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="north-america">
+                        <div class="flag-placeholder">🇨🇦</div>
+                        <h3>Canadá</h3>
+                        <p class="delegation-size">13 delegados</p>
+                        <p class="delegation-focus">Multiculturalismo</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="south-america">
+                        <div class="flag-placeholder">🇦🇷</div>
+                        <h3>Argentina</h3>
+                        <p class="delegation-size">12 delegados</p>
+                        <p class="delegation-focus">Economia Regional</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="delegation-card" data-continent="asia">
+                        <div class="flag-placeholder">🇮🇳</div>
+                        <h3>Índia</h3>
+                        <p class="delegation-size">19 delegados</p>
+                        <p class="delegation-focus">Desenvolvimento Sustentável</p>
+                        <button class="delegation-btn">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="delegation-stats">
+                    <h2>Estatísticas das Delegações</h2>
+                    <div class="stats-visual">
+                        <div class="continent-stats">
+                            <div class="stat-bar" data-continent="asia">
+                                <span class="continent-name">Ásia</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 35%"></div>
+                                </div>
+                                <span class="stat-number">67 países</span>
+                            </div>
+                            <div class="stat-bar" data-continent="europe">
+                                <span class="continent-name">Europa</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 28%"></div>
+                                </div>
+                                <span class="stat-number">54 países</span>
+                            </div>
+                            <div class="stat-bar" data-continent="africa">
+                                <span class="continent-name">África</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 28%"></div>
+                                </div>
+                                <span class="stat-number">54 países</span>
+                            </div>
+                            <div class="stat-bar" data-continent="america">
+                                <span class="continent-name">Américas</span>
+                                <div class="bar">
+                                    <div class="bar-fill" style="width: 18%"></div>
+                                </div>
+                                <span class="stat-number">35 países</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MaxOnu 2025</h3>
+                    <p>O maior evento de delegações das Nações Unidas do mundo.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="delegations.html">Delegações</a></li>
+                        <li><a href="rules.html">Regras</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>maxonu@contato.com</p>
+                    <a href="https://www.instagram.com/maxonuofc/" target="_blank" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MaxOnu. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="delegations.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<script>
+    // Delegations page functionality
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('country-search');
+    const continentFilter = document.getElementById('continent-filter');
+    const delegationsGrid = document.getElementById('delegations-grid');
+    const delegationCards = document.querySelectorAll('.delegation-card');
+
+    // Search functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            filterDelegations(searchTerm, continentFilter?.value || '');
+        });
+    }
+
+    // Filter functionality
+    if (continentFilter) {
+        continentFilter.addEventListener('change', function() {
+            const continent = this.value;
+            filterDelegations(searchInput?.value.toLowerCase() || '', continent);
+        });
+    }
+
+    // Filter delegations function
+    function filterDelegations(searchTerm, continent) {
+        delegationCards.forEach(card => {
+            const countryName = card.querySelector('h3').textContent.toLowerCase();
+            const cardContinent = card.getAttribute('data-continent');
+            
+            const matchesSearch = countryName.includes(searchTerm);
+            const matchesContinent = !continent || cardContinent === continent;
+            
+            if (matchesSearch && matchesContinent) {
+                card.style.display = 'block';
+                card.classList.add('fade-in');
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('fade-in');
+            }
+        });
+    }
+
+    // Delegation detail buttons
+    const delegationButtons = document.querySelectorAll('.delegation-btn');
+    delegationButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.delegation-card');
+            const country = card.querySelector('h3').textContent;
+            showDelegationModal(country, card);
+        });
+    });
+
+    // Show delegation modal
+    function showDelegationModal(country, card) {
+        const modal = createModal();
+        const delegateCount = card.querySelector('.delegation-size').textContent;
+        const focus = card.querySelector('.delegation-focus').textContent;
+        
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Delegação ${country}</h2>
+                <div class="modal-body">
+                    <p><strong>Tamanho da Delegação:</strong> ${delegateCount}</p>
+                    <p><strong>Foco Principal:</strong> ${focus}</p>
+                    <div class="delegation-details">
+                        <h3>Informações Adicionais</h3>
+                        <ul>
+                            <li>Participação em comissões principais</li>
+                            <li>Reuniões bilaterais agendadas</li>
+                            <li>Apresentações especiais programadas</li>
+                            <li>Contribuições para debates temáticos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        modal.style.display = 'flex';
+        
+        // Close modal functionality
+        const closeBtn = modal.querySelector('.close-modal');
+        closeBtn.addEventListener('click', () => {
+            modal.remove();
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+    }
+
+    // Create modal element
+    function createModal() {
+        const modal = document.createElement('div');
+        modal.className = 'delegation-modal';
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease-out;
+        `;
+        
+        // Add modal styles
+        const modalStyles = document.createElement('style');
+        modalStyles.textContent = `
+            .modal-content {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                max-width: 500px;
+                width: 90%;
+                max-height: 80vh;
+                overflow-y: auto;
+                position: relative;
+                animation: slideUp 0.3s ease-out;
+            }
+            
+            .close-modal {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 2rem;
+                cursor: pointer;
+                color: var(--primary-blue);
+            }
+            
+            .modal-body {
+                margin-top: 1rem;
+            }
+            
+            .delegation-details {
+                margin-top: 2rem;
+                padding: 1rem;
+                background: var(--light-gray);
+                border-radius: 10px;
+            }
+            
+            .delegation-details ul {
+                margin-top: 1rem;
+                padding-left: 1.5rem;
+            }
+            
+            .delegation-details li {
+                margin-bottom: 0.5rem;
+            }
+        `;
+        
+        if (!document.querySelector('#modal-styles')) {
+            modalStyles.id = 'modal-styles';
+            document.head.appendChild(modalStyles);
+        }
+        
+        return modal;
+    }
+
+    // Animate stats bars
+    const statBars = document.querySelectorAll('.bar-fill');
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 200);
+                statsObserver.unobserve(bar);
+            }
+        });
+    });
+
+    statBars.forEach(bar => {
+        statsObserver.observe(bar);
+    });
+});
+</script>
