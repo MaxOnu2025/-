@@ -424,6 +424,15 @@
     min-height: 300px;
 }
 
+.blog-post .post-image {
+    width: 751px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    background-image: url('WhatsApp Image 2025-09-17 at 17.31.53.jpeg');  
+  
+    position: center;
+    overflow: hidden;
+}
+
 .blog-post .post-image0 {
     height: 200px;
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
@@ -630,9 +639,10 @@
     border-radius: 20px;
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(135deg, var(--light-gray), var(--medium-gray));
+    
     position: relative;
     overflow: hidden;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
 }
 
 .upload-area::before {
@@ -642,7 +652,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(26, 35, 126, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(134, 129, 129, 0.05) 0%, transparent 70%);
     transition: all 0.3s ease;
     opacity: 0;
 }
