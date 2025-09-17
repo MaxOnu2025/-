@@ -425,7 +425,7 @@
 }
 
 .blog-post .post-image {
-    width: 751px;
+    width: 200px;
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     background-image: url('WhatsApp Image 2025-09-17 at 17.31.53.jpeg');  
   
@@ -1107,4 +1107,5 @@
         border: 1px solid #ccc;
     }
 }
+
 
