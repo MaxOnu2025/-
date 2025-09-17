@@ -425,12 +425,12 @@
 }
 
 .blog-post .post-image {
-    width: 200px;
+    width: 751px;
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     background-image: url('WhatsApp Image 2025-09-17 at 17.31.53.jpeg');  
   
     position: center;
-    overflow: hidden;
+    overflow: hidden;      
 }
 
 .blog-post .post-image0 {
@@ -1107,4 +1107,3 @@
         border: 1px solid #ccc;
     }
 }
-
