@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const excitementFill = document.getElementById('excitement-fill');
         if (!excitementFill) return;
 
-        const totalTime = new Date('October 18, 2025 07:10:00').getTime() - new Date('January 1, 2025').getTime();
+        const totalTime = new Date('October 18, 2025 07:10:00').getTime() - new Date('October 18, 2025').getTime();
         const timeElapsed = totalTime - timeRemaining;
         const percentage = Math.min(95, (timeElapsed / totalTime) * 100 + 50);
         
